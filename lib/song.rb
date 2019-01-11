@@ -1,18 +1,17 @@
 class Song 
-  
-  @@count = 0 
-  @@genre = []
+  @@count = 0
   
   def self.count 
     @@count
-  end
+  end 
   
-  @genres = []
+  @@genres = []
+  
   
   def self.genres
-    @@genres.uniq 
+    @@genres.uniq
   end
-  
+
   def self.genre_count
     @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
   end 
@@ -36,4 +35,4 @@ class Song
     @@count += 1
   end
   attr_accessor :name, :artist, :genre
-end
+end 
